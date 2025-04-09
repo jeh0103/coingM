@@ -1,4 +1,4 @@
-// don't place package name. 
+// 기둥 세우기
 
 import java.io.*;
 
