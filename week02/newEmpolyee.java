@@ -1,4 +1,4 @@
-//
+//신입사원 채용
 
 import java.io.*;
 import java.util.*;
