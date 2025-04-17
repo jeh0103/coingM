@@ -5,7 +5,7 @@ import java.util.*;
 
 public class Main {
     static class Apartment implements Comparable<Apartment> {
-        int index;      // 단지 번호 (1부터 시작)
+        int index;      // 단지 번호 
         int location;   // 위치 D[i]
         int people;     // 거주 인원 A[i]
 
@@ -42,7 +42,7 @@ public class Main {
         long prefixSum = 0;
         for (Apartment apt : list) {
             prefixSum += apt.people;
-            if (prefixSum >= (totalPeople + 1) / 2) { // 절반 이상이면
+            if (prefixSum >= (totalPeople + 1) / 2) { 
                 System.out.println(apt.index);
                 break;
             }
