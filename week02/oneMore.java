@@ -33,9 +33,9 @@ public class Main {
         // 시작점
         dist[0][0] = map[0][0]; 
  
-        // 우선순위 큐 (다익스트라를 위한 최소 힙) 
+        // 우선순위 큐
         PriorityQueue<Point> pq = new PriorityQueue<>((a, b) -> a.cost - b.cost); 
-        pq.offer(new Point(0, 0, map[0][0]));  // 시작점 넣기 
+        pq.offer(new Point(0, 0, map[0][0]));  
  
         // 다익스트라 알고리즘 
         while (!pq.isEmpty()) { 
