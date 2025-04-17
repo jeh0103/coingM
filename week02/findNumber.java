@@ -5,7 +5,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        // 입력 처리
+     
         Scanner scanner = new Scanner(System.in);
         
         // 첫 번째 줄: 이름의 수 N과 영덕이의 영어 이름
