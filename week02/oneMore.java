@@ -3,7 +3,6 @@
 // don't place package name.  
  
 import java.io.*; 
- 
 import java.util.*;  
  
 // don't change 'Main' class name and  'public' accessor.  
@@ -11,16 +10,15 @@ import java.util.*;
 public class Main { 
     public static void main(String[] args) { 
         Scanner scanner = new Scanner(System.in); 
- 
-        // N: 격자의 크기 
+  
         int N = scanner.nextInt(); 
  
-        // 격자에 있는 떡의 개수들을 저장할 2D 배열 
+        // 격자에 있는 떡의 개수
         int[][] map = new int[N][N]; 
-        // 각 위치로 가는 최소 떡 개수를 기록할 배열 
+        // 각 위치로 가는 최소 떡 개수
         int[][] dist = new int[N][N]; 
          
-        // 상하좌우 이동을 위한 방향 배열 
+        // 상하좌우 
         int[] dx = {-1, 1, 0, 0}; 
         int[] dy = {0, 0, -1, 1}; 
  
@@ -28,11 +26,11 @@ public class Main {
         for (int i = 0; i < N; i++) { 
             for (int j = 0; j < N; j++) { 
                 map[i][j] = scanner.nextInt(); 
-                dist[i][j] = Integer.MAX_VALUE;  // 시작 전엔 최소 떡 개수를 무한으로 설정 
+                dist[i][j] = Integer.MAX_VALUE;  // 시작 전엔 최소 떡 개수를 무한
             } 
         } 
  
-        // 시작점 (0, 0)에서 시작 
+        // 시작점
         dist[0][0] = map[0][0]; 
  
         // 우선순위 큐 (다익스트라를 위한 최소 힙) 
@@ -63,11 +61,9 @@ public class Main {
             } 
         } 
  
-        // 최소 떡 개수 출력 
         System.out.println(dist[N-1][N-1]); 
     } 
- 
-    // 좌표와 비용을 나타내는 Point 클래스 
+  
     static class Point { 
         int x, y, cost; 
  
